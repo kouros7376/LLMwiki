@@ -4,41 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "19c3f360a778f990",
+        "id": "0bb6456bedfc9880",
         "type": "tabs",
         "children": [
           {
-            "id": "9555a2fd78ac0efc",
+            "id": "77b199f16f2874db",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/LLM Wiki 활용해보기  네이버 블로그.md",
-                "mode": "source",
+                "file": "wiki/건설_PMS.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LLM Wiki 활용해보기  네이버 블로그"
+              "title": "건설_PMS"
             }
           }
         ]
       },
       {
-        "id": "8cebf33709bf412d",
+        "id": "15f197dfadda41f4",
         "type": "tabs",
         "children": [
           {
             "id": "4e1973d8d8710f6e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/건설_PMS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "건설_PMS"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
         ]
@@ -98,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 257.5
   },
   "right": {
     "id": "913613badfd6fb6c",
@@ -114,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2026-05-03.md",
+                "file": "wiki/ERP_벤더_비교.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "2026-05-03 의 백링크"
+              "title": "ERP_벤더_비교 의 백링크"
             }
           },
           {
@@ -202,34 +198,41 @@
       "command-palette:명령어 팔레트 열기": false,
       "bases:새 베이스 생성하기": false,
       "obsidian-git:Open Git source control": false,
-      "rss-dashboard:RSS dashboard": false
+      "rss-dashboard:RSS dashboard": false,
+      "terminal:Open terminal": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-importer:Open Importer": false
     }
   },
-  "active": "4e1973d8d8710f6e",
+  "active": "908e7d032757857c",
   "lastOpenFiles": [
+    "wiki/건축IT_사내개발_전략.md",
+    "wiki/AEC_자동화_플랫폼.md",
+    "wiki/정림건축_혁신본부.md",
+    "wiki/해외_AEC_사내개발.md",
+    "wiki/자동화_시나리오.md",
+    "wiki/워크플로우_자동화_도구.md",
+    "wiki/Claude_Code.md",
+    "wiki/바이브_코딩_도구.md",
+    "raw/2026-05-05_aec_korea_inhouse_dev.md",
+    "raw/2026-05-05_aec_global_inhouse_dev.md",
+    "raw/2026-05-05_workflow_automation_tools.md",
+    "raw/2026-05-05_vibe_coding_tools.md",
+    "wiki/건설_PMS.md",
+    "wiki/영림원_K-System_Ace.md",
+    "2026-05-05.md",
+    "wiki/ERP_벤더_비교.md",
+    "raw/2026-05-05_amaranth10_vs_ksystem_comparison.md",
+    "wiki/더존_아마란스10.md",
+    "wiki/LLM_Wiki_개념.md",
+    "raw/2026-05-05_amaranth10_overview.md",
+    "raw/LLM Wiki 활용해보기  네이버 블로그.md",
     "wiki/건강검진.md",
     "raw/2026-05-05_younglimwon_ksystem_ace.md",
-    "raw/LLM Wiki 활용해보기  네이버 블로그.md",
     "wiki/통합형_vs_연동형.md",
     "wiki/정보_일원화_패턴.md",
     "wiki/지식의_복리.md",
-    "wiki/LLM_Wiki_개념.md",
-    "wiki/ERP_RFP_체크리스트.md",
-    "wiki/건설_PMS.md",
-    "wiki/ERP_벤더_비교.md",
-    "wiki/영림원_K-System_Ace.md",
-    "wiki/더존_아마란스10.md",
-    "raw/2026-05-05_construction_pms_reference.md",
-    "raw/2026-05-05_amaranth10_vs_ksystem_comparison.md",
-    "raw/2026-05-05_amaranth10_overview.md",
-    "raw/LLM Wiki  AI에게 기억력을 심는 방..  네이버블로그.md",
-    "CLAUDE.md",
     "Clippings",
-    "2026-05-03.md",
-    "무제.md",
-    "환영합니다!.md",
-    "wiki/log.md",
-    "wiki/index.md",
     "wiki",
     "raw"
   ]

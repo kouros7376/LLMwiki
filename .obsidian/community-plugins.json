@@ -1,4 +1,11 @@
 [
   "obsidian-git",
-  "rss-dashboard"
+  "rss-dashboard",
+  "terminal",
+  "obsidian-excalidraw-plugin",
+  "obsidian-icon-folder",
+  "obsidian-minimal-settings",
+  "obsidian-importer",
+  "cm-typewriter-scroll-obsidian",
+  "obsidian-scroll-to-top-plugin"
 ]

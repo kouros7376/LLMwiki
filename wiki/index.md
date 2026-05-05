@@ -13,27 +13,37 @@
 - [[건설_PMS]] — 건설/건축 PMS·PMIS 일반론, 대림산업 사례
 - [[ERP_RFP_체크리스트]] — 도입 시 검증 항목 25개
 
-### AI 바이브 코딩 / Claude 활용
+### AI 바이브 코딩
 바이브 코딩 워크플로우, Claude 활용 패턴, LLM Wiki 개념.
-- [[LLM_Wiki_개념]] — Karpathy 원전, 3 레이어 + 3 모드, 한국 블로그 사례 2건
+- [[Claude_Code]] — 본 위키 운영 환경. MCP 6개 연동
+- [[바이브_코딩_도구]] — Claude Code · Cursor · Copilot · Windsurf · Antigravity · Kiro 6강 비교
+- [[LLM_Wiki_개념]] — Karpathy 원전, 3 레이어 + 3 모드, 한국 블로그 사례
 - [[지식의_복리]] — RAG vs Wiki 메타 명제
 
-### 메타 / 인사이트 (cross-cutting)
-서로 다른 도메인을 가로지르는 패턴. ERP/PMS와 LLM 도메인이 같은 구조를 공유한다는 통찰.
-- [[정보_일원화_패턴]] — 손익 일원화 ↔ 단일 플랫폼 ↔ Wiki 누적의 동형성
-- [[통합형_vs_연동형]] — 더존:영림원 = ChatGPT Workspace : Claude+MCP
-- [[건강검진]] — Lint ↔ ERP 정합성 ↔ PMS 마감 점검의 동형성
-
 ### 전산업무 자동화
-전산실 운영/업무 자동화 도구 레퍼런스.
-- _(아직 페이지 없음)_
+전산실 운영/업무 자동화 도구 + 시나리오.
+- [[워크플로우_자동화_도구]] — n8n · Power Automate · Make · Zapier · Retool
+- [[자동화_시나리오]] — 5개 사내 적용 시나리오 + 단계적 도입 로드맵
+
+### 건축 IT / AEC
+건축설계사무소 사내 개발·디지털 전환 레퍼런스.
+- [[해외_AEC_사내개발]] — Foster + Partners (Hydra/Hermes 등 6개 사내 도구), Gensler NFORM
+- [[정림건축_혁신본부]] — Junglim Innovation + JAdU. 한국 1위 사례
+- [[AEC_자동화_플랫폼]] — Speckle · Hypar · Augmenta + NXT BLD 2026 트렌드
+- [[건축IT_사내개발_전략]] — 300명 규모 사무소용 3단계 로드맵
+
+### 메타 / 인사이트 (cross-cutting)
+서로 다른 도메인을 가로지르는 패턴. ERP/PMS/LLM/AEC 가 같은 구조를 공유한다는 통찰.
+- [[정보_일원화_패턴]] — 손익 일원화 = LLM Wiki 누적 = 단일 플랫폼 = BIM 단일정보원
+- [[통합형_vs_연동형]] — 더존:영림원 = ChatGPT Workspace:Claude+MCP = Construction Cloud:Speckle
+- [[건강검진]] — 위키 Lint = ERP 정합성 = PMS 마감 점검 = 자동화 모니터링
 
 ## 통계
 
-- 총 페이지: 10 (index, log 제외)
+- 총 페이지: 18 (index, log 제외)
 - 마지막 업데이트: 2026-05-05
-- 카테고리: 4 (ERP·마이그레이션 / AI 바이브 코딩 / 메타·인사이트 / 전산업무 자동화)
-- 입수 raw 자료: 6 (ERP/PMS 4 + LLM Wiki 블로그 2)
+- 카테고리: 5
+- 입수 raw 자료: 10 (ERP/PMS 4 + LLM Wiki 블로그 2 + AI/자동화/AEC 4)
 
 ## 사용법 메모
 
@@ -45,6 +55,10 @@
 
 처음 위키를 보는 사람을 위한 추천 동선:
 1. [[지식의_복리]] — 왜 이 위키인가
-2. [[정보_일원화_패턴]] — 본 위키의 핵심 통찰 (LLM Wiki ↔ ERP 동형성)
-3. [[통합형_vs_연동형]] — ERP 의사결정 1차 분기점
-4. 그 다음 ERP 카테고리 페이지들로 진입
+2. [[정보_일원화_패턴]] — 본 위키의 핵심 통찰 (LLM Wiki ↔ ERP ↔ BIM 동형성)
+3. [[통합형_vs_연동형]] — 모든 도메인의 1차 분기점
+4. **본인 업무 진입로 선택**:
+   - ERP 의사결정 → [[ERP_벤더_비교]]
+   - 사내 개발 시작 → [[건축IT_사내개발_전략]]
+   - 자동화 도입 → [[자동화_시나리오]]
+   - 코드 작업 도구 → [[Claude_Code]] / [[바이브_코딩_도구]]
