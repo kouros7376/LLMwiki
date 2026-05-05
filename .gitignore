@@ -1,0 +1,4 @@
+# Graphify 환경별 데이터 (그래프 본체는 추적, 토큰·캐시는 제외)
+graphify-out/manifest.json
+graphify-out/cost.json
+graphify-out/cache/

@@ -19,6 +19,7 @@
 - [[바이브_코딩_도구]] — Claude Code · Cursor · Copilot · Windsurf · Antigravity · Kiro 6강 비교
 - [[LLM_Wiki_개념]] — Karpathy 원전, 3 레이어 + 3 모드, 한국 블로그 사례
 - [[지식의_복리]] — RAG vs Wiki 메타 명제
+- [[Graphify]] — Karpathy 직계 자동 그래프 도구. 본 위키의 자동화·시각화 보완재 (2026-05-05 도입)
 
 ### 전산업무 자동화
 전산실 운영/업무 자동화 도구 + 시나리오.
@@ -40,10 +41,10 @@
 
 ## 통계
 
-- 총 페이지: 18 (index, log 제외)
+- 총 페이지: 19 (index, log 제외)
 - 마지막 업데이트: 2026-05-05
 - 카테고리: 5
-- 입수 raw 자료: 10 (ERP/PMS 4 + LLM Wiki 블로그 2 + AI/자동화/AEC 4)
+- 입수 raw 자료: 11 (ERP/PMS 4 + LLM Wiki 블로그 2 + AI/자동화/AEC 4 + Graphify 1)
 
 ## 사용법 메모
 

@@ -6,6 +6,7 @@
       {
         "id": "0bb6456bedfc9880",
         "type": "tabs",
+        "dimension": 41.00801832760595,
         "children": [
           {
             "id": "77b199f16f2874db",
@@ -13,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/건설_PMS.md",
+                "file": "wiki/자동화_시나리오.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "건설_PMS"
+              "title": "자동화_시나리오"
             }
           }
         ]
@@ -26,6 +27,7 @@
       {
         "id": "15f197dfadda41f4",
         "type": "tabs",
+        "dimension": 58.99198167239405,
         "children": [
           {
             "id": "4e1973d8d8710f6e",
@@ -204,13 +206,29 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "908e7d032757857c",
+  "active": "4e1973d8d8710f6e",
   "lastOpenFiles": [
+    "graphify-out/cost.json",
+    "graphify-out/manifest.json",
+    "graphify-out/graph.html",
+    "graphify-out/graph.json",
+    "graphify-out/GRAPH_REPORT.md",
+    "graphify-out/cache/semantic/37e7ef58b26a07f7b7a7c17c043d9046ae37ea81ed2e07d249d5371b463539ef.json",
+    "graphify-out/cache/semantic/242a452ece99e584a1a441f437dbe48edae173e6dea98742488ba80cd711e592.json",
+    "graphify-out/cache/semantic/2a0ba397407f048a0d05d08188996c6a227df675d787b3e33b2bdff4f7c11007.json",
+    "graphify-out/cache/semantic/ae289c746bd13bdcacefd89fa49012ef37badcc1d02beffadc6d4ec59cabb163.json",
+    "graphify-out/cache/semantic/6a1d2cb649123445e8484309f684f1ba44b841a1947cc2d465f8aca6d203a5c5.json",
+    "graphify-out/cache/semantic/ec3489fa2a18086ff718d6e2f2512147d5913c700f13aa4b352147a00ac270d3.json",
+    "graphify-out/cache/semantic/2914bfafd41b6124d38dd317d8b4ca5416b507bedacd0f8429c968655ebc33dd.json",
+    "wiki/Graphify.md",
+    "raw/2026-05-05_graphify_install_guide.md",
+    "wiki/정림건축_혁신본부.md",
+    "wiki/자동화_시나리오.md",
+    "wiki/index.md",
+    "wiki/건설_PMS.md",
     "wiki/건축IT_사내개발_전략.md",
     "wiki/AEC_자동화_플랫폼.md",
-    "wiki/정림건축_혁신본부.md",
     "wiki/해외_AEC_사내개발.md",
-    "wiki/자동화_시나리오.md",
     "wiki/워크플로우_자동화_도구.md",
     "wiki/Claude_Code.md",
     "wiki/바이브_코딩_도구.md",
@@ -218,7 +236,6 @@
     "raw/2026-05-05_aec_global_inhouse_dev.md",
     "raw/2026-05-05_workflow_automation_tools.md",
     "raw/2026-05-05_vibe_coding_tools.md",
-    "wiki/건설_PMS.md",
     "wiki/영림원_K-System_Ace.md",
     "2026-05-05.md",
     "wiki/ERP_벤더_비교.md",
@@ -226,14 +243,6 @@
     "wiki/더존_아마란스10.md",
     "wiki/LLM_Wiki_개념.md",
     "raw/2026-05-05_amaranth10_overview.md",
-    "raw/LLM Wiki 활용해보기  네이버 블로그.md",
-    "wiki/건강검진.md",
-    "raw/2026-05-05_younglimwon_ksystem_ace.md",
-    "wiki/통합형_vs_연동형.md",
-    "wiki/정보_일원화_패턴.md",
-    "wiki/지식의_복리.md",
-    "Clippings",
-    "wiki",
-    "raw"
+    "raw/LLM Wiki 활용해보기  네이버 블로그.md"
   ]
 }

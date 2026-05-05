@@ -4,12 +4,21 @@
 
 | 날짜 | 작업 | raw 자료 | 갱신/생성된 페이지 |
 |------|------|----------|--------------------|
+| 2026-05-05 | **Graphify 도입** — Karpathy `/raw` 폴더 워크플로 직계 도구. Python 3.12.10 환경에 `graphifyy` 0.7.5 설치 + Claude Code Windows 글로벌 스킬(`~/.claude/skills/graphify/`) 등록. vault `CLAUDE.md` 보존 위해 사용자 레벨 설치 채택. 자동 그래프·INFERRED 엣지 후보 발견으로 본 위키 수동 [[교차참조]] 보완. [[지식의_복리]] 의 토큰 절감 명제(Lucas Rosati 사례 499x) 정량 구현 | `2026-05-05_graphify_install_guide.md` | [[Graphify]], [[index]] |
 | 2026-05-05 | **건강검진** — 깨진 링크 1건(CLAUDE.md 헤더 `[[위키링크]]`) 백틱 처리. 6개 점검 항목 모두 클린. 메타 페이지(정보_일원화_패턴 56, 통합형_vs_연동형 43, 지식의_복리 33)가 그래프 중심에 위치 — 본 위키 통찰 구조 정상 | — | [[CLAUDE]] |
 | 2026-05-05 | AI/자동화/AEC 자료 4건 ingest. 카테고리 2개(AI 바이브 코딩 / 전산업무 자동화) 채움 + 신규 카테고리 1개(건축 IT/AEC) 신설. Foster Hermes ↔ ERP 손익 일원화, Hydra ↔ 지식의 복리 등 의외의 동형성 추가 | `2026-05-05_vibe_coding_tools.md`, `2026-05-05_workflow_automation_tools.md`, `2026-05-05_aec_global_inhouse_dev.md`, `2026-05-05_aec_korea_inhouse_dev.md` | [[Claude_Code]], [[바이브_코딩_도구]], [[워크플로우_자동화_도구]], [[자동화_시나리오]], [[해외_AEC_사내개발]], [[정림건축_혁신본부]], [[AEC_자동화_플랫폼]], [[건축IT_사내개발_전략]], [[index]] |
 | 2026-05-05 | ERP/PMS + LLM Wiki 자료 6건 ingest. 의외의 도메인 동형성 발견(LLM Wiki ↔ ERP 손익 일원화) → 메타 페이지 3개 신설 | `2026-05-05_amaranth10_overview.md`, `2026-05-05_younglimwon_ksystem_ace.md`, `2026-05-05_amaranth10_vs_ksystem_comparison.md`, `2026-05-05_construction_pms_reference.md`, `LLM Wiki AI에게 기억력을 심는 방.. 네이버블로그.md`, `LLM Wiki 활용해보기 네이버 블로그.md` | [[더존_아마란스10]], [[영림원_K-System_Ace]], [[ERP_벤더_비교]], [[건설_PMS]], [[ERP_RFP_체크리스트]], [[LLM_Wiki_개념]], [[지식의_복리]], [[정보_일원화_패턴]], [[통합형_vs_연동형]], [[건강검진]], [[index]] |
 | 2026-05-05 | 위키 초기화 — 폴더 구조, CLAUDE.md, index, log 생성 | — | [[index]], [[log]] |
 
 ## 메모 — 의외의 연결점 누적
+
+### 3차 ingest (2026-05-05, Graphify 도입)
+- **Graphify README가 명시적으로 "Karpathy /raw 폴더 워크플로 기반"** ← 본 위키와 같은 원전 직계. 본 위키가 인간(Claude) 큐레이션 위주라면 Graphify는 알고리즘 클러스터링 위주 — 같은 가치의 두 구현
+- **Graphify 의 18개+ 어댑터 (Claude/Cursor/Codex/Gemini/Copilot/Antigravity/...) + `--mcp` 모드** = [[Claude_Code]] + MCP 6개와 같은 [[통합형_vs_연동형|연동형]] 아키텍처. 코어 엔진 + 다수 인터페이스 조립
+- **graph.json 영속 = [[지식의_복리]] 의 토큰 단위 측정** (Lucas Rosati 사례: 세션당 71.5x, 쿼리당 499x). [[지식의_복리]] 명제가 정량적으로 측정 가능해진 것
+- **Foster Hermes 단일 데이터원 ↔ Graphify graph.json 단일 그래프** = [[정보_일원화_패턴]] 의 BIM 도메인 ↔ 지식 도메인 동형
+- **Graphify EXTRACTED/INFERRED/AMBIGUOUS 엣지 감사 = [[CLAUDE|운영규칙]] "추측 금지" 원칙의 알고리즘 표상**. 동일 메커니즘
+- **`graphify benchmark` + `--cluster-only` = [[건강검진]] 의 자동화 도구**. 고립 노드/중복 후보/미연결 카테고리를 정량 점검
 
 ### 2차 ingest (2026-05-05, AI/자동화/AEC)
 - **Foster Hermes (클라우드 단일 데이터원)** = ERP 손익 일원화 = 위키 단일 정보원 → [[정보_일원화_패턴]] 의 AEC 도메인
