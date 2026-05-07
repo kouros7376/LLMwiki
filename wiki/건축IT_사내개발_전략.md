@@ -52,6 +52,10 @@
 3. **Speckle PoC** ([[AEC_자동화_플랫폼]])
    - 비용: 오픈소스, 셀프호스트 가능
    - 효과: BIM 도구 간 데이터 흐름 즉시 개선, 락인 회피 검증
+4. **[[RPA|선택적 RPA PoC]]** — 정부 사이트 1건 한정 (4대보험 EDI 또는 홈택스)
+   - 비용: Power Automate Desktop 무료 또는 AutomateOne/CheckMATE PoC 500-1,500만원
+   - 효과: API 부재 영역의 자동화 입증. 본 사무소 [[RPA|3-tier 아키텍처]] 의 RPA 자리 검증
+   - 주의: 봇 개수 X, **"절감 시간 + 오류율 감소"가 KPI** (Gartner Agent-washing 경고)
 
 ### 2단계 (6~18개월): 디지털 디자인 그룹 신설
 **목표**: 1~3명 전담 인력으로 사내 개발 본격화.

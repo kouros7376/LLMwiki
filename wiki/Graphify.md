@@ -133,6 +133,42 @@ Graphify는 18개+ AI 어시스턴트(Claude / Cursor / Codex / Gemini / Copilot
 ### 자동 [[건강검진]] 도구
 본 위키의 [[건강검진]] 절차(깨진 링크·중복·고립 노드·스텁·미인덱스) 중 그래프 구조 부분(고립 노드·중복 후보·미연결 카테고리)은 `graphify benchmark` 와 `graph.json` 분석으로 자동화 가능. Lint 모드의 알고리즘 보강.
 
+## 유사 도구와의 위치 — 차별점
+
+PyTorch Korea 정리에 따른 인접 도구 비교 (본 위키 운영 관점에서 재정리):
+
+| 도구 | 강점 | Graphify 와의 차이 | kouwiki 적용 여지 |
+|------|------|------|------|
+| **Sourcegraph** | 엔터프라이즈급 cross-repo 코드 검색·내비게이션 | 구조화 지식 그래프 미형성, 의미론적 맥락 추출 제한 | 코드 비중 큰 사내 모노리포에는 보완재. 본 위키(문서 위주)에는 과잉 |
+| **Code2Vec** | 함수 수준 임베딩 + 벡터 검색·분류 | Graphify 는 임베딩 생략, 명시 그래프. 멀티모달(문서·이미지) 처리 | ML 연구·코드 분류 작업에 특화. 본 위키 마크다운 vault 에는 부적합 |
+| **Neo4j** | 강력한 Cypher 쿼리 + 범용 그래프 DB | 자동 그래프 '생성' 도구가 아님 (저장소). Graphify 는 `--neo4j` 옵션으로 연동 가능 | 본 위키 규모(20여 페이지) 에는 graph.json 로 충분. 수백 페이지 + 다중 사용자 단계에서 후속 검토 |
+
+→ **Graphify 의 자리**: "Karpathy /raw 워크플로 + 멀티모달 + 자동 클러스터" 의 교집합. 본 위키와 같은 계보를 공유하므로 1순위.
+
+## 보안 설계 (로컬 우선)
+
+PyTorch Korea 정리에 명시된 Graphify 의 보안 원칙 — 사내 도입 검토 시 핵심 자료:
+
+- **AST 파싱 100% 로컬**: 소스 코드는 Tree-sitter 로 사용자 머신에서만 분석. 서드파티 LLM 서버로 **원시 코드 전송 없음**
+- **외부 호출은 사용자 자체 API 키만 사용**: 문서·이미지 의미 분석에서만 LLM 네트워크 호출 발생, 사용자가 구성한 키 (ANTHROPIC_API_KEY 등) 한정
+- **공격 표면 사전 차단**: 입력 크기·시간 제한 + 경로 캡슐화 + 노드 라벨 HTML 이스케이프 → SSRF / XSS / YAML 인젝션 방어
+- **MIT License**: 핵심 종속성(NetworkX, Tree-sitter) 모두 허용적 라이선스 → 상업적 사내 사용 자유
+
+→ [[ERP_RFP_체크리스트]] 의 보안 항목과 동일한 사고 구조. 사내 분석 도구 도입 시 **"원시 데이터가 어디로 가는가"** 의 답이 명확. [[해외_AEC_사내개발|Foster 의 "AI 실용성, 자체 통제" 원칙]] 과 같은 입장.
+
+## GraphRAG / LightRAG 와의 위치 — 자동 그래프 추출과의 분기
+
+2026-05-06 리서치에서 확인된 그래프 기반 RAG 도구의 위치:
+
+| 도구 | 인덱싱 비용 | 강점 | 본 위키 적합성 |
+|------|-------------|------|---------------|
+| **Graphify** | 작음 (Tree-sitter AST) | 폴더 자동 그래프, MIT, Karpathy 직계 | **1순위** — 본 vault 와 같은 계보 |
+| Microsoft GraphRAG | 큼 (LLM 으로 엔티티·관계 추출) | Global/Local/DRIFT/Basic 4 모드, holistic 질문 | 대규모 비정형 (회의록 10년치) |
+| LightRAG (EMNLP 2025) | 중 (듀얼 레벨 + 증분) | 농업·CS·법률·혼합 도메인 우위 (45.2 → 54.8) | 중규모 다도메인 |
+| Neo4j + LLM | 큼 (수동 스키마) | 정형 그래프 (BIM 객체·프로젝트 관계) | 사무소 BIM 데이터 별도 |
+
+→ 본 사무소 적용: 사내 매뉴얼·정책 = [[LLM_Wiki_개념|LLM Wiki]], 프로젝트 코드/문서 = **Graphify**, 회의록·메일 같은 원시 대량 = GraphRAG/Vector RAG fallback. 단일 시스템 강요 X. → [[Wiki_Backed_Chatbot|챗봇 4가지 통합 패턴]] 참고.
+
 ## 한계 / 주의
 
 - **Claude Code 외부 헤드리스는 LLM 키 필요**: `graphify extract` 는 ANTHROPIC_API_KEY 또는 MOONSHOT_API_KEY 요구. `graphify update` 는 코드 파일만 다루므로 마크다운 위주 vault 에 무용.

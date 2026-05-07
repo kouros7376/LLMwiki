@@ -2,3 +2,6 @@
 graphify-out/manifest.json
 graphify-out/cost.json
 graphify-out/cache/
+
+# Claude가 생성하는 일회성 도구·진단 스크립트 (커밋 대상 아님)
+.health_check.py

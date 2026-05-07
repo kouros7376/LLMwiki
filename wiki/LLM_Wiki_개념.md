@@ -49,6 +49,16 @@ Andrej Karpathy 가 2026년 4월 초 트위터/Gist 로 제안한 운영 패턴.
 - 결과: 옵시디언 그래프뷰로 자동 연결 시각화. "그들의 생각과 방향성을 대답해주는 나만의 LLM"
 - 회사 적용 아이디어: **Jira issue 다 ingest 후 신규 issue 발생 시 Claude 에게 던지기** ← 의외의 연결: ERP 마이그레이션의 **레거시 데이터 ingest** 와 정확히 같은 패턴
 
+### 사례 3 — "흩어진 메모에서 살아있는 지식 그래프로" (Abraham Song, Brunch)
+- 동기: Visa 엔지니어링 그룹 지식관리자 출신이지만 본인 지식이 Google Drive · Gmail · OneNote · Apple Notes · Slack · Medium · Brunch 에 분산. 옵시디언 로컬 구현 후 sync 구독료 회피 위해 셀프호스트 채택
+- 구현: Hetzner CX23 리눅스 VPS (월 ~5달러) + FastAPI 백엔드 + Vanilla JS SPA + D3.js 포스 시뮬레이션 + Telegram 봇 + Hermes 에이전트. [wiki.ai-biz.app](https://wiki.ai-biz.app) 에서 운영
+- 차별점: [[Graphify]] 통합으로 페이지 하단에 **자동 [[교차참조]] 주입** (EXTRACTED/INFERRED/AMBIGUOUS 라벨 + 신뢰도 점수). 본 위키와 달리 인간 큐레이션 단계 없이 그래프 결과가 표면화
+- 핵심 메타: **"사서(librarian)" 비유** — LLM 을 검색 엔진이 아닌 사서로 취급. 사서는 묻기 전에 스스로 정리·연결·패턴 발견. → [[지식의_복리]] 의 "컴파일된 지식" 비유의 시스템 관점 짝
+- 실증 데이터: OAuth2 ↔ PaymentGateway 가 공유 유틸 함수로 연결되어 있음을 Graphify 가 자동 발견 (수동 위키링크에 절대 안 잡힘)
+- 자세한 분석은 [[LLM_Wiki_웹구현_사례]] 별도 페이지
+
+→ 사례 1·2 가 옵시디언 로컬에 머문다면, 사례 3 은 **같은 패턴의 셀프호스트 웹 구현** — 본 위키가 사내 공유 단계로 진화할 경우 직접 참고할 청사진.
+
 ## 알려진 한계
 - **토큰 소비** — Ingest 시 토큰 많이 씀. 모델 최적화 부재 시 비용 부담
 - **환각 방지** — 주기적 lint 필수. [[건강검진]] 으로 데이터 무결성 유지
@@ -60,6 +70,12 @@ Andrej Karpathy 가 2026년 4월 초 트위터/Gist 로 제안한 운영 패턴.
 - [[index]] 가 마스터 인덱스
 - [[log]] 가 작업 이력
 - 본 페이지 자체가 Karpathy 패턴의 자기참조적 정리
+
+## Karpathy 본인 사례 — 100 페이지 / 40만 단어
+
+2026년 4월 GitHub Gist 공개 후 16M views. 운영 방식: 한쪽에 Claude Code/Cursor, 다른 쪽에 Obsidian. 새 소스 들어오면 LLM 이 위키 전체 업데이트, 본인은 읽기·질문·방향 제시만. **단일 연구 주제 위키가 100 articles · 400,000 words** (PhD 논문보다 길음). 본인이 직접 쓴 부분 없음. **"Obsidian = IDE, LLM = programmer, wiki = codebase"** 메타포가 본 위키 [[Wiki_Backed_Chatbot|챗봇 통합]] 아키텍처의 출발점.
+
+→ 본 사무소 운영 확장 시 Karpathy 의 1인 모델을 그대로 쓸 수 없음 (권한·동시편집·드리프트 governance 미검증). 5~10명 admin 큐레이션 모델로 확장 시 발생하는 8가지 운영 패턴은 [[LLM_Wiki_운영_패턴]] 별도 페이지에 정리.
 
 ## 의외의 도메인 연결 — ERP 마이그레이션
 
